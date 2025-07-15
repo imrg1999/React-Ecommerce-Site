@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import './App.css'
 import Navbar from './Components/Navbar'
 import { BrowserRouter, Route, Routes } from 'react-router'
 import Home from './Components/Home'
@@ -6,6 +7,7 @@ import About from './Components/About'
 import Contact from './Components/Contact'
 import Product from './Components/Product'
 import ThemeContext from './Components/ThemeContext'
+import Signin from './Components/Signin'
 
 
 const App = () => {
@@ -18,8 +20,8 @@ const App = () => {
     <ThemeContext value={mode}>
       <Navbar
         button={
-          <button onClick={changeTheme} className="btn btn-sm btn-outline-light">
-            {mode === 'dark' ? 'Dark Mode' : 'Light Mode'}
+          <button onClick={changeTheme} className="theme-toggle-btn">
+            {mode === 'dark' ? '🌙' : '☀️'}
           </button>
         }
       />
@@ -29,6 +31,7 @@ const App = () => {
       <Route path='/about' element={<About/>}/>
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/product' element={<Product/>}/>
+      <Route path='/signin' element={<Signin/>}/>
     </Routes>
     </ThemeContext>
     </BrowserRouter>
