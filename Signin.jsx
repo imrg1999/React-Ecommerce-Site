@@ -19,18 +19,18 @@ const Signin = () => {
       <form className="form-group">
   <div className="col-md-8">
     <label for="inputEmail4" className="form-label">Email</label>
-    <input type="email" className="form-control" id="inputEmail4"/>
+    <input type="email" className="form-control" id="inputEmail4" placeholder='Enter Email Address...'/>
   </div>
   
  
   <div className="col-md-6">
     <label for="inputPassword4" className="form-label">Password</label>
-    <input type="password" className="form-control" id="inputPassword4"/>
+    <input type="password" className="form-control" id="inputPassword4" placeholder='Enter Password...'/>
   </div>
   <div className="row">
   <div className="form-group col-md-6">
     <label htmlFor="inputCity" className="form-label">City</label>
-    <input type="text" className="form-control" id="inputCity" />
+    <input type="text" className="form-control" id="inputCity" placeholder='Enter City.....' />
   </div>
 
   <div className="form-group col-md-6">
@@ -39,7 +39,7 @@ const Signin = () => {
       type="text"
       className="form-control"
       id="inputAddress"
-      placeholder="1234 Main St"
+      placeholder="Enter Address...."
     />
   </div>
 </div>
@@ -53,7 +53,7 @@ const Signin = () => {
   </div>
   <div className="col-md-2">
     <label for="inputZip" className="form-label">Zip</label>
-    <input type="text" className="form-control" id="inputZip"/>
+    <input type="text" className="form-control" id="inputZip" placeholder='Enter Zip Code...'/>
   </div>
   <div className="col-12">
     <div className="form-check">
