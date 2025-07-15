@@ -8,7 +8,7 @@ import Contact from './Components/Contact'
 import Product from './Components/Product'
 import ThemeContext from './Components/ThemeContext'
 import Signin from './Components/Signin'
-
+import Footer from './Components/Footer'
 
 const App = () => {
   const[mode, setMode] = useState("dark");
@@ -33,6 +33,7 @@ const App = () => {
       <Route path='/product' element={<Product/>}/>
       <Route path='/signin' element={<Signin/>}/>
     </Routes>
+    <Footer/>
     </ThemeContext>
     </BrowserRouter>
     </>
