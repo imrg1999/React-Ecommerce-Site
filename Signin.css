@@ -51,17 +51,6 @@
   outline: none;
 }
 
-/* Checkbox */
-.signin-container .form-check-input {
-  background-color: #1e1e1e;
-  border: 1px solid #555;
-}
-
-.signin-container .form-check-input:checked {
-  background-color: #00d4ff;
-  border-color: #00d4ff;
-}
-
 /* Button */
 .signin-container .btn-primary {
   background-color: #00d4ff;

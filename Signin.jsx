@@ -14,7 +14,7 @@ const Signin = () => {
         transition: 'all 0.3s ease'
       }}
     >
-      <h1>Sign In</h1> <hr />
+      <h1>Welcome New User</h1> <hr />
       <div className='form-arrange'>
       <form className="form-group">
   <div className="col-md-8">
@@ -48,21 +48,14 @@ const Signin = () => {
     <label for="inputState" className="form-label">State</label>
     <select id="inputState" className="form-select">
       <option selected>Choose...</option>
-      <option>...</option>
+      <option>Enter State...</option>
       </select>
   </div>
   <div className="col-md-2">
     <label for="inputZip" className="form-label">Zip</label>
     <input type="text" className="form-control" id="inputZip" placeholder='Enter Zip Code...'/>
   </div>
-  <div className="col-12">
-    <div className="form-check">
-      <input className="form-check-input" type="checkbox" id="gridCheck"/>
-      <label className="form-check-label" for="gridCheck">
-        Check me out
-      </label>
-    </div>
-  </div>
+  <br />
   <div className="col-12">
     <button type="submit" className="btn btn-primary">Sign in</button>
   </div>
