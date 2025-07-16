@@ -10,23 +10,15 @@ const Footer = () => {
 				<div className="footer_menu">
 					<ul>
 						<li><a href="/">Home</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Service</a></li>
-						<li><a href="#">Works</a></li>
-						<li><a href="#">Contact</a></li>
+						<li><a href="/about">About</a></li>
+						<li><a href="/product">Product</a></li>
+						<li><a href="/signin">Sign In</a></li>
+						<li><a href="/contact">Contact</a></li>
 					</ul>
 				</div>						
 				<div class="footer_copyright">
 					<p>© 2025 Rupankar. All Rights Reserved.</p>
-			</div>	
-				<div class="footer_profile">
-					<ul>
-						<li><a href="#"><i className="fa fa-facebook"></i></a></li>
-						<li><a href="#"><i className="fa fa-twitter"></i></a></li>
-						<li><a href="#"><i className="fa fa-instagram"></i></a></li>
-						<li><a href="#"><i className="fa fa-pinterest"></i></a></li>
-					</ul>
-				</div>						
+			</div>						
 			</div>						
 		</div>				
 	</div>

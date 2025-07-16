@@ -91,6 +91,8 @@ body {
 .btn-outline-success {
   color: #00d4ff;
   border-color: #00d4ff;
+  width: 80px;
+  height: 40px;
   font-weight: 500;
   transition: all 0.3s ease-in-out;
 }

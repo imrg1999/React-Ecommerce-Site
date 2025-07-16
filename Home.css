@@ -1,0 +1,55 @@
+/* Full page wrapper */
+.home_page {
+  position: relative;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: #00d4ff;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Dark overlay for readability */
+.home_overlay {
+  background-color: rgba(26, 26, 26, 0.7); /* semi-transparent dark layer */
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  max-width: 700px;
+  width: 100%;
+}
+
+/* Heading */
+.home_overlay h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Subheading */
+.home_overlay p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+/* Call to Action Button */
+.home_overlay button {
+  background-color: #00d4ff;
+  color: #121212;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.home_overlay button:hover {
+  background-color: #76efff;
+  color: #1b1b1b;
+}

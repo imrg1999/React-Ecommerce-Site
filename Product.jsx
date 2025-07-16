@@ -1,41 +1,48 @@
-import React, { useEffect, useState, useContext } from 'react'
-import ThemeContext from './ThemeContext';
+import React, { useEffect, useState, useContext } from "react";
+import ThemeContext from "./ThemeContext";
+import "./Product.css";
 
 const Product = () => {
-  const mode = useContext(ThemeContext);
-  const [shop, setShop] = useState([]);
-  const [spinner, setSpinner] = useState(true);
-  async function fetchStore() {
-    try {
-    const res = await fetch('https://fakestoreapi.in/api/products');
-    const data = await res.json();
-    setShop(data);
-    } catch(e) {console.log(e)}
-    finally{setSpinner(false);}
-  }
+  const mode = useContext(ThemeContext); // "light" or "dark"
+  const [products, setProducts] = useState([]);
+  const [status, setStatus] = useState("loading");
+
   useEffect(() => {
-    fetchStore();
-  }, [])
-  
+    (async () => {
+      try {
+        const res = await fetch("https://fakestoreapi.com/products");
+        const data = await res.json();
+        setProducts(Array.isArray(data) ? data : []);
+        setStatus("ready");
+      } catch (err) {
+        setStatus("error");
+        console.error(err);
+      }
+    })();
+  }, []);
+
   return (
-    <div style={{
-        backgroundColor: mode === 'dark' ? '#121212' : '#f4f4f4',
-        color: mode === 'dark' ? '#ffffff' : '#121212',
-        padding: '2rem',
-        minHeight: '100vh',
-        transition: 'all 0.3s ease'
-      }}>
-        <div>
-        <h1>Welcome to the Product store</h1>
+    <div className={`product-page ${mode}`}>
+      <h1> <strong>Welcome to the Product Store</strong> </h1> <hr />
+
+      {status === "loading" && <p>Loading products...</p>}
+      {status === "error" && <p>Failed to fetch products.</p>}
+
+      {status === "ready" && (
+        <div className="product-grid">
+          {products.map((item) => (
+            <div className="product-card" key={item.id}>
+              <img src={item.image} alt={item.title} />
+              <h2>{item.title}</h2>
+              <p className="price">${item.price}</p>
+              <p className="desc">{item.description}</p>
+              <button>View Product</button>
+            </div>
+          ))}
         </div>
-        <div> {spinner? (<h1>Loading...</h1>) : ( Array.isArray(shop) && shop.map((item) => {
-          return(
-            <div key={item.id}>title: {item.title}</div>
-          )
-        }))}</div>
-
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default Product
+export default Product;
